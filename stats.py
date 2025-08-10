@@ -19,3 +19,13 @@ def count_characters():
             characters[char] = 1
     return characters
 
+def sort_on(items):
+    return items["count"]
+
+def sort_dict(chars_dict):
+    chars_list = []
+    for char, count in chars_dict.items():
+        char_dict = {"char": char, "count": count}
+        chars_list.append(char_dict)
+    chars_list.sort(reverse=True, key=sort_on)
+    return chars_list
