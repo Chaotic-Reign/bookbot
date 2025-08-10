@@ -3,13 +3,11 @@ def get_book_text(path_to_file):
         file_contents = f.read()
         return file_contents
 
-def get_num_words():
-    words = get_book_text("books/frankenstein.txt")
-    words = words.split()
-    return len(words)
+def get_num_words(text):
+    text = text.split()
+    return len(text)
 
-def count_characters():
-    text = get_book_text("books/frankenstein.txt")
+def count_characters(text):
     text = text.lower()
     characters = {}
     for char in text:
